@@ -1,0 +1,72 @@
+<!-- Navbar -->
+<%- include("partials/item-header", { backPage: backPage }); -%>
+
+    <!-- Header Section -->
+    <div class="container-fluid" id="header-section">
+      <!-- Title and Description -->
+      <h1><%=project.title%></h1>
+      <% project.description.forEach((paragraph) => { %>
+        <p><%= paragraph %></p>
+      <% }) %>
+      <% project.additionalDescription.forEach((paragraph) => { %>
+        <p><%= paragraph %></p>
+      <% }) %>
+      <!-- Icons -->
+      <div class="mb-3">
+        <% project.svgIcons.forEach((icon) => { %>
+          <a class="social-icons"
+          ><img
+            src="/images/<%=icon%>.svg"
+            alt=<%=icon%>
+            height="25px"
+        /></a>
+        <% }) %>
+        <% project.pngIcons.forEach((icon) => { %>
+          <a class="social-icons"
+          ><img
+            src="/images/<%=icon%>.png"
+            alt=<%=icon%>
+            height="25px"
+        /></a>
+        <% }) %>
+        <% project.jpgIcons.forEach((icon) => { %>
+          <a class="social-icons"
+          ><img
+            src="/images/<%=icon%>.jpg"
+            alt=<%=icon%>
+            height="25px"
+        /></a>
+        <% }) %>
+      </div>
+      <!-- Link to Actual Project (if exist) -->
+      <% if(project.link !== "#") { %>
+        <a href=<%=project.link%>>
+          <span>Link to project</span
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#63707e"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="text-gray-400 dark:text-gray-500"
+          >
+            <line x1="7" y1="17" x2="17" y2="7" class="svg-path"></line>
+            <polyline points="7 7 17 7 17 17" class="svg-path"></polyline>
+          </svg>
+        </a>
+      <% } %>
+    </div>
+
+    <!-- Body Section -->
+    <div class="container-fluid" id="body-section">
+      <!-- Project Images -->
+      <% project.imageSrc.forEach((src) => { %>
+        <img src=<%=src%> alt=<%=project.title%> width="100%" class="project-img"/>
+      <% }) %>
+    </div>
+
+<%- include("partials/footer"); -%>

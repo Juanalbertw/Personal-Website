@@ -1,0 +1,46 @@
+<!-- Navbar and Header -->
+<%- include("partials/header"); -%>
+
+      <!-- Alternative Navigation Buttons -->
+      <a type="button" href="/" class="btn main-btn"> Back to home </a>
+      <a type="button" href="/projects" class="btn second-btn">
+        See my projects
+      </a>
+      <!-- More Button -->
+      <div class="dropdown dropdown-menu-end btn-div">
+        <a
+          class="btn nav-link dropdown-toggle dropdown-menu-end more-btn"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          More
+        </a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdown"
+        >
+          <li>
+            <a class="dropdown-item" href="/thoughts">Thoughts</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="/recommendations"
+              >Recommendations</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Body Section -->
+    <div class="container-fluid" id="body-section">
+      <!-- Container -->
+      <div id="pdf-container" class="p-3 bg-light border rounded-3"></div>
+      <!-- Import PDFObject via CDN -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.7/pdfobject.min.js"></script>
+      <!-- Embed CV to Container -->
+      <script>PDFObject.embed("/pdf/juan-albert-wibowo.pdf", "#pdf-container");</script>
+    </div>
+
+<%- include("partials/footer"); -%>

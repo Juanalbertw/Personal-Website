@@ -1,0 +1,71 @@
+<!-- Navbar and Header -->
+<%- include("partials/header"); -%>
+
+      <!-- Alternative Navigation Buttons -->
+      <a type="button" href="/" class="btn main-btn"> Back to home </a>
+      <!-- More Button -->
+      <div class="dropdown dropdown-menu-end btn-div">
+        <a
+          class="btn nav-link dropdown-toggle dropdown-menu-end more-btn"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          More
+        </a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdown"
+        >
+          <li>
+            <a class="dropdown-item" href="/projects">Projects</a>
+          </li>
+          <li><a class="dropdown-item" href="/cv">CV</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li>
+            <a class="dropdown-item" href="/recommendations"
+              >Recommendations</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Body Section -->
+    <div class="container-fluid" id="body-section">
+      <p>
+        I once asked The Vice President of a giant ICT company what he thinks the young generation lacks today. One trait he mentioned was <em>deep thinking</em>.
+      </p>
+      <p>
+        I understand deep thinking as a process of <em>consolidating our thoughts</em> regarding a particular matter. While other people's views will often influence ours, we must deeply ponder on them to adapt and adjust until it becomes our own, or at least we truly understand them.
+      </p>
+
+      <!-- Thoughts per Topic -->
+      <% thoughts.forEach((thoughtTopic) => { %>
+        <!-- Topic Title -->
+        <h2><%=thoughtTopic[0]%></h2>
+        <!-- Thought -->
+        <% thoughtTopic[1].forEach((thought) => { %>
+          <div class="h-100 bg-light border rounded-3 thoughts-jumbotron">
+            <!-- Thought Title -->
+            <p><strong><%= thought.title %></strong></p>
+            <!-- Thought Content -->
+            <div class="content hide-content">
+              <% thought.description.forEach((paragraph) => { %>
+                <p><%= paragraph %></p>
+              <% }); %>
+            </div>
+            <!-- Show More/Show Less -->
+            <div class="show-more">
+              <a>Show more</a>
+            </div>
+          </div>      
+        <% }); %>
+      <% }) %>
+    </div>
+
+    <!-- External Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/thoughts.js"></script>
+<%- include("partials/footer"); -%>

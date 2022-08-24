@@ -1,0 +1,223 @@
+<!-- Navbar and Header -->
+<%- include("partials/header"); -%>
+
+      <!-- Alternative Navigation Buttons -->
+      <a type="button" href="/" class="btn main-btn"> Back to home </a>
+      <a type="button" href="/cv" class="btn second-btn"> See my CV </a>
+      <!-- More Button -->
+      <div class="dropdown dropdown-menu-end btn-div">
+        <a
+          class="btn nav-link dropdown-toggle dropdown-menu-end more-btn"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          More
+        </a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdown"
+        >
+          <li>
+            <a class="dropdown-item" href="/thoughts">Thoughts</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="/recommendations"
+              >Recommendations</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Body Section -->
+    <div class="container-fluid" id="body-section">
+      <p>
+        Here are some of my projects. They're not the most spectacular, but I'm proud of them! Through building these projects, I've become a better programmer.
+      </p>
+      
+      <!-- Original Subsection -->
+      <h2>Original</h2>
+      <!-- Project Item -->
+      <% originalProjects.forEach((project) => { %>
+        <div class="project-item">
+          <!-- Title and Description -->
+          <% if(project.title !== "") { %>
+            <p class="project-title"><em><%=project.title%></em></p>
+          <% } %>
+          <% project.description.forEach((paragraph) => { %>
+            <p><%= paragraph %></p>
+          <% }) %>
+          <!-- Icons -->
+          <div class="mb-3">
+            <% project.svgIcons.forEach((icon) => { %>
+              <a class="social-icons"
+              ><img
+                src="/images/<%=icon%>.svg"
+                alt=<%=icon%>
+                height="25px"
+            /></a>
+            <% }) %>
+            <% project.pngIcons.forEach((icon) => { %>
+              <a class="social-icons"
+              ><img
+                src="/images/<%=icon%>.png"
+                alt=<%=icon%>
+                height="25px"
+            /></a>
+            <% }) %>
+            <% project.jpgIcons.forEach((icon) => { %>
+              <a class="social-icons"
+              ><img
+                src="/images/<%=icon%>.jpg"
+                alt=<%=icon%>
+                height="25px"
+            /></a>
+            <% }) %>
+          </div>
+          <!-- Link to Project Page (if exist) -->
+          <% if(project.link !== "NA") { %>
+            <a href="/projects/original/<%=project.id%>">
+              <span>See more</span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#63707e"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-gray-400 dark:text-gray-500"
+              >
+                <line x1="7" y1="17" x2="17" y2="7" class="svg-path"></line>
+                <polyline points="7 7 17 7 17 17" class="svg-path"></polyline>
+              </svg>
+            </a>
+          <% } %>
+          <!-- External Links (if exist) -->
+          <% if(project.externalLink.length > 0) { %>
+            <% project.externalLink.forEach((link) => { %>
+              <a href="<%=link[1]%>">
+                <span><%=link[0]%></span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#63707e"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-gray-400 dark:text-gray-500"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" class="svg-path"></line>
+                  <polyline points="7 7 17 7 17 17" class="svg-path"></polyline>
+                </svg>
+              </a>
+            <% }) %>
+          <% } %>
+        </div>
+
+      <% }) %>
+      
+      <!-- Tutorial Subsection -->
+      <h2>Tutorial</h2>
+      <p class="project-title">
+        There are several projects I've made by joining
+        <em>The Complete 2022 Web Development Bootcamp</em>. Unlike many courses and tutorials out there, Dr. Angela Yu, the instructor of this course, provided us with challenges that we need to do by our own. Thus, I'm not just coding along, but actively learning to program by doing the challenges by my own.
+      </p>
+      <!-- Project Item -->
+      <% tutorialProjects.forEach((project) => { %>
+        <div class="project-item">
+          <!-- Title and Description -->
+          <% if(project.title !== "") { %>
+            <p class="project-title"><em><%=project.title%></em></p>
+          <% } %>
+          <% project.description.forEach((paragraph) => { %>
+            <p><%= paragraph %></p>
+          <% }) %>
+          <!-- Icons -->
+          <div class="mb-3">
+            <% project.svgIcons.forEach((icon) => { %>
+              <a class="social-icons"
+              ><img
+                src="/images/<%=icon%>.svg"
+                alt=<%=icon%>
+                height="25px"
+            /></a>
+            <% }) %>
+            <% project.pngIcons.forEach((icon) => { %>
+              <a class="social-icons"
+              ><img
+                src="/images/<%=icon%>.png"
+                alt=<%=icon%>
+                height="25px"
+            /></a>
+            <% }) %>
+            <% project.jpgIcons.forEach((icon) => { %>
+              <a class="social-icons"
+              ><img
+                src="/images/<%=icon%>.jpg"
+                alt=<%=icon%>
+                height="25px"
+            /></a>
+            <% }) %>
+          </div>
+          <!-- Link to Project Page (if exist) -->
+          <% if(project.link !== "NA") { %>
+            <a href="/projects/tutorial/<%=project.id%>">
+              <span>See more</span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#63707e"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-gray-400 dark:text-gray-500"
+              >
+                <line x1="7" y1="17" x2="17" y2="7" class="svg-path"></line>
+                <polyline points="7 7 17 7 17 17" class="svg-path"></polyline>
+              </svg>
+            </a>
+          <% } %>
+          <!-- External Links (if exist) -->
+          <% if(project.externalLink.length > 0) { %>
+            <% project.externalLink.forEach((link) => { %>
+              <a href="<%=link[1]%>">
+                <span><%=link[0]%></span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#63707e"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-gray-400 dark:text-gray-500"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" class="svg-path"></line>
+                  <polyline points="7 7 17 7 17 17" class="svg-path"></polyline>
+                </svg>
+              </a>
+            <% }) %>
+          <% } %>
+        </div>
+      <% }) %>
+
+      <!-- Information -->
+      <p class="large-mt">
+        N.B.: The icons represent the languages, frameworks, libraries, etc., I learned and used in each project.
+      </p>
+    </div>
+
+<%- include("partials/footer"); -%>

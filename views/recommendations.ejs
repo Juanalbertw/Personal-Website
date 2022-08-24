@@ -1,0 +1,67 @@
+<!-- Navbar and Header -->
+<%- include("partials/header"); -%>
+
+          <!-- Alternative Navigation Buttons -->
+          <a type="button" href="/" class="btn main-btn"> Back to home </a>
+          <!-- More Button -->
+          <div class="dropdown dropdown-menu-end btn-div">
+            <a
+            class="btn nav-link dropdown-toggle dropdown-menu-end more-btn"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            >
+            More
+          </a>
+          <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdown"
+          >
+          <li>
+            <a class="dropdown-item" href="/projects">Projects</a>
+          </li>
+          <li><a class="dropdown-item" href="/cv">CV</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li>
+            <a class="dropdown-item" href="/thoughts">Thoughts</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Body Section -->
+    <div class="container-fluid" id="body-section">
+      <p>
+        I love reading books, though I'm still trying to build a reading habit. Here are some books I've read that I'd love to recommend!
+      </p>
+      <p>
+        If you have any idea of what I should share in this section, feel free to let me know!
+      </p>
+      <!-- Books Subsection -->
+      <h2>Books</h2>
+      <!-- Slick Carousel -->
+      <div class="books-carousel">
+        <% books.forEach((book) => { %>
+          <!-- Book Card -->
+          <div class="my-card">
+            <!-- Cover Image -->
+            <img src="<%=book.imageSrc%>" class="card-img-top" alt="<%=book.title%>">
+            <!-- Title and Author -->
+            <div class="card-body">
+              <p class="card-text mb-0"><em><%=book.title%></em></p>
+            </div>
+            <div class="card-body small-text">
+              <p class="card-text">By: <%=book.author%></p>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+    
+    <!-- External Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="/js/recommendations.js"></script>
+
+<%- include("partials/footer"); -%>

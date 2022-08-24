@@ -1,0 +1,96 @@
+<!-- Navbar and Header -->
+<%- include("partials/header"); -%>
+
+      <!-- Alternative Navigation Buttons -->
+      <a type="button" href="/projects" class="btn main-btn">
+        See my projects
+      </a>
+      <a type="button" href="/cv" class="btn second-btn"> See my CV </a>
+      <!-- More Button -->
+      <div class="dropdown dropdown-menu-end btn-div">
+        <a
+          class="btn nav-link dropdown-toggle dropdown-menu-end more-btn"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          More
+        </a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdown"
+        >
+          <li>
+            <a class="dropdown-item" href="/thoughts">Thoughts</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="/recommendations"
+              >Recommendations</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Body Section -->
+    <div class="container-fluid" id="body-section">
+      <p>
+        I'm an <em>undergraduate Computer Science student</em> who enjoys learning how to program, hoping to use technology to solve real problems in the near future.
+      </p>
+
+      <!-- Education Subsection -->
+      <h2>Education</h2>
+      <p>
+        I'm in my second year of studies towards a bachelor's degree in Computer Science at <a href="https://www.cuhk.edu.cn/en">The Chinese University of Hong Kong, Shenzhen (CUHKSZ)</a>. I studied at <a href="https://ipeka.org/location/ipeka-puri/">Ipeka Puri</a> from elementary to senior high school.
+      </p>
+      <a href="/education">
+          <span>See more</span
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#63707e"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="text-gray-400 dark:text-gray-500"
+          >
+            <line x1="7" y1="17" x2="17" y2="7" class="svg-path"></line>
+            <polyline points="7 7 17 7 17 17" class="svg-path"></polyline>
+          </svg>
+      </a>
+      
+      <!-- Interests Subsection -->
+      <h2>Interests</h2>
+      <p>
+        I haven't known which area of Computer Science I want to undertake. I'm currently learning <em>Fullstack Web Development</em>. Several areas that catch my interest are: <em>Software Engineering</em>, <em>Systems / Databases</em>, and <em>Artificial Intelligence</em>.
+      </p>
+
+      <!-- Connect Subsection -->
+      <h2>Connect</h2>
+      <p>Reach me on Instagram for a chat and connect with me on LinkedIn!</p>
+      <!-- Social Icons -->
+      <div class="social">
+        <a href="https://www.instagram.com/juan.albert/" class="social-icons"
+          ><img src="images/instagram.svg" alt="Instagram" height="20px"
+        /></a>
+        <a
+          href="https://www.linkedin.com/in/juan-albert-wibowo/"
+          class="social-icons"
+          ><img src="images/linkedin.svg" alt="Linkedin" height="20px"
+        /></a>
+        <a href="https://github.com/Juanalbertw" class="social-icons"
+          ><img src="images/github.svg" alt="Github" height="20px"
+        /></a>
+        <a
+          href="https://open.spotify.com/user/21urt4ccth6bltglaxuap7pba"
+          class="social-icons"
+          ><img src="images/spotify.svg" alt="Spotify" height="20px"
+        /></a>
+      </div>
+    </div>
+
+<%- include("partials/footer"); -%>

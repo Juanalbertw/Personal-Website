@@ -1,0 +1,279 @@
+/* ************** */
+/* Color Pallette */
+/* ************** */
+:root {
+  --main-color: #100f0f;
+  --second-color: #63707e;
+  --btn-color: #0f3d3e;
+  --btn-second-color: #1d595a;
+  --text-hover-color: #cdbe78;
+}
+
+/* *********** */
+/* UI Elements */
+/* *********** */
+
+h1 {
+  font-family: "Archivo", sans-serif;
+}
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  margin: 13% 0 4%;
+  font-size: 0.9rem;
+
+  color: var(--second-color);
+}
+
+h3 {
+  font-family: "Archivo", sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 0.7rem;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--second-color);
+}
+
+a:hover {
+  color: var(--text-hover-color);
+}
+
+a:hover .svg-path {
+  stroke: var(--text-hover-color);
+}
+
+a:not([href]):not([class]):hover {
+  color: var(--text-hover-color);
+  cursor: pointer;
+}
+
+/* ******* */
+/* Margins */
+/* ******* */
+
+.large-mt {
+  margin-top: 13%;
+}
+
+.additional-mb {
+  margin-bottom: 13%;
+}
+
+/* ******** */
+/* Sections */
+/* ******** */
+
+#header-section {
+  padding: 15% 25% 4%;
+}
+
+#body-section {
+  padding: 0 25% 15%;
+}
+
+/* ******* */
+/* Buttons */
+/* ******* */
+
+.btn {
+  border-radius: 1.6rem;
+}
+
+.main-btn {
+  background-color: var(--btn-color);
+  color: #fff;
+  font-weight: 600;
+}
+
+.second-btn {
+  box-shadow: 0px 0px 0.1px 1px var(--btn-color) inset;
+  color: var(--btn-color);
+  font-weight: 600;
+}
+
+.more-btn {
+  box-shadow: 0px 0px 0.1px 1px var(--second-color) inset;
+  color: var(--second-color);
+  font-weight: 600;
+}
+
+.main-btn:hover {
+  background-color: var(--btn-second-color);
+  color: #fff;
+}
+
+.second-btn:hover {
+  box-shadow: 0px 0px 0.1px 2px var(--btn-color) inset;
+  background-color: #2b70711a;
+  color: var(--btn-color);
+}
+
+.more-btn:hover {
+  box-shadow: 0px 0px 0.1px 2px var(--second-color) inset;
+  background-color: #63707e15;
+  color: var(--second-color);
+}
+
+/* ***** */
+/* Icons */
+/* ***** */
+
+.social {
+  margin-top: 50px;
+}
+
+.social-icons {
+  margin-right: 30px;
+}
+
+/* ********** */
+/* Navigation */
+/* ********** */
+
+/* Navbar */
+.caret-off::before {
+  display: none;
+}
+.caret-off::after {
+  display: none;
+}
+
+#navbarDropdown {
+  text-align: right;
+}
+
+.navbar {
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: flex-start;
+}
+
+.nav-link {
+  padding: 0.375rem 0.75rem;
+}
+
+/* Back button in item page */
+.nav-back {
+  padding: 0.5rem 0 0.5rem;
+}
+
+/* Additional navigation buttons */
+.btn-div {
+  display: inline;
+}
+
+.btn-div .nav-link {
+  display: inline;
+}
+
+/* ************ */
+/* Project Page */
+/* ************ */
+
+.project-item {
+  margin: 0 0 8%;
+}
+
+.project-title {
+  font-family: "Newsreader", serif;
+}
+
+/* ***************** */
+/* Project Item Page */
+/* ***************** */
+
+.project-img:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+/* ******* */
+/* CV Page */
+/* ******* */
+
+#pdf-container {
+  height: 850px;
+}
+
+/* ************* */
+/* Thoughts Page */
+/* ************* */
+
+.thoughts-jumbotron {
+  padding: 1.2rem 2rem 1.2rem;
+  margin: 2% 0 0;
+}
+
+.thoughts-jumbotron .content p {
+  margin-bottom: 1.5rem;
+}
+
+.hide-content {
+  overflow: hidden;
+  line-height: 1.5em;
+  height: 6em;
+}
+
+.show-content {
+  line-height: 1.5em;
+  height: auto;
+}
+
+.show-more {
+  margin-top: 1rem;
+}
+
+/* ******************** */
+/* Reccomendations Page */
+/* ******************** */
+
+/* Slick Slider */
+.slick-prev {
+  left: 10px;
+  z-index: 1;
+}
+
+.slick-next {
+  right: 10px;
+  z-index: 1;
+}
+
+.slick-track {
+  display: flex;
+}
+
+/* Cards */
+.my-card {
+  width: fit-content !important;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  display: inline-block;
+}
+
+.card-img-top {
+  height: 270px;
+  width: auto;
+}
+
+.card-body {
+  word-wrap: normal;
+  display: flex;
+}
+
+.card-text {
+  font-family: "Newsreader", serif;
+  flex-grow: 1;
+  width: 0;
+}
+
+.small-text {
+  font-size: 0.8rem;
+  padding-top: 0;
+}
