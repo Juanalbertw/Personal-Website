@@ -2,13 +2,26 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
+const mongoose = require("mongoose");
 
 // Data
 const myData = require("./myData.json");
 const originalProjects = myData["projects"]["originalProjects"];
 const tutorialProjects = myData["projects"]["tutorialProjects"];
-const thoughts = myData["thoughts"];
 const books = myData["recommendations"]["books"];
+
+mongoose.connect(
+  "mongodb+srv://user1:MongoDB123@cluster0.39zcuhb.mongodb.net/personalWebDB"
+);
+
+const thoughtSchema = new mongoose.Schema({
+  topic: String,
+  thoughts: [{ title: String, description: [String] }],
+});
+
+const Thought = mongoose.model("Thought", thoughtSchema);
+
+// App
 
 const app = express();
 
@@ -60,8 +73,20 @@ app.get("/cv", (req, res) => {
 });
 
 app.get("/thoughts", (req, res) => {
-  res.render("thoughts", {
-    thoughts: thoughts,
+  Thought.find({}, (err, foundItems) => {
+    if (err) {
+      res.send(err);
+    } else {
+      // Gather the topics that already exist in an array
+      let listOfTopics = [];
+      foundItems.forEach((obj) => {
+        listOfTopics.push(obj.topic);
+      });
+
+      res.render("thoughts", {
+        thoughtsData: foundItems,
+      });
+    }
   });
 });
 

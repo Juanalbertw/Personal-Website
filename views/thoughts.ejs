@@ -42,26 +42,28 @@
       </p>
 
       <!-- Thoughts per Topic -->
-      <% thoughts.forEach((thoughtTopic) => { %>
-        <!-- Topic Title -->
-        <h2><%=thoughtTopic[0]%></h2>
+      <% thoughtsData.forEach((thoughtObject) => { %>
         <!-- Thought -->
-        <% thoughtTopic[1].forEach((thought) => { %>
-          <div class="h-100 bg-light border rounded-3 thoughts-jumbotron">
-            <!-- Thought Title -->
-            <p><strong><%= thought.title %></strong></p>
-            <!-- Thought Content -->
-            <div class="content hide-content">
-              <% thought.description.forEach((paragraph) => { %>
-                <p><%= paragraph %></p>
-              <% }); %>
-            </div>
-            <!-- Show More/Show Less -->
-            <div class="show-more">
-              <a>Show more</a>
-            </div>
-          </div>      
-        <% }); %>
+        <% if (thoughtObject.thoughts.length !== 0) { %>
+          <!-- Topic Title -->
+          <h2><%=thoughtObject.topic%></h2>
+          <% thoughtObject.thoughts.forEach((thought) => { %>
+            <div class="h-100 bg-light border rounded-3 thoughts-jumbotron">
+              <!-- Thought Title -->
+              <p><strong><%= thought.title %></strong></p>
+              <!-- Thought Content -->
+              <div class="content hide-content">
+                <% thought.description.forEach((paragraph) => { %>
+                  <p><%= paragraph %></p>
+                <% }); %>
+              </div>
+              <!-- Show More/Show Less -->
+              <div class="show-more">
+                <a>Show more</a>
+              </div>
+            </div>      
+          <% }); %>
+        <% } %>
       <% }) %>
     </div>
 

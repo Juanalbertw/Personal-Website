@@ -15,8 +15,10 @@
           "js",
           "bootstrap",
           "ejs",
+          "mongodb",
           "express",
-          "node"
+          "node",
+          "mongoose"
         ],
         "pngIcons": [],
         "jpgIcons": [],
@@ -68,7 +70,7 @@
           "Aside from implementing Express.js and EJS, this was my first introduction to databases to persist data. I learned to use MongoDB and the Mongoose and Lodash library."
         ],
         "additionalDescription": [],
-        "svgIcons": ["ejs", "mongodb", "express", "node", "mongoose", "lodash"],
+        "svgIcons": ["ejs", "mongodb", "express", "node", "mongoose"],
         "pngIcons": [],
         "jpgIcons": [],
         "link": "#",
@@ -105,37 +107,6 @@
       }
     ]
   },
-
-  "thoughts": [
-    [
-      "Work",
-      [
-        {
-          "id": "0",
-          "title": "Managing Workload",
-          "description": [
-            "I subscribe to Cal Newport's idea of slow productivity and not having too much on our plate at one time. It's not what we achieve in the next month or term that matters the most, but in the next year or even longer. Some days we're productive, but some days we're not, and that's OK.",
-            "In my experience, doing too much at once is detrimental to my life as a whole. What is life if it's just for work, even stressfully? I find myself burned out soon. Time also seems to fly so fast without me appreciating it enough.",
-            "I want a life I can enjoy while pursuing my goals instead of pushing back my enjoyment to a point after reaching my goals. I think one of the ways is to reduce the things I'll focus on in every period. We should know how much work we're capable of handling, which could allow us to live in the moment, enjoying each of them, because they'll never return."
-          ]
-        }
-      ]
-    ],
-    [
-      "Life",
-      [
-        {
-          "id": "0",
-          "title": "Ready to Go to Heaven",
-          "description": [
-            "To the question, \"Are you ready to die?\" people often answer, \"I'm not,\" followed by saying they haven't done something meaningful or still have many things on their bucket list. In my opinion, we've wrongly understood the intent of this question.",
-            "I believe in an afterlife, either in heaven or hell. And I feel that the true intention of this question is to let us ask ourselves whether we're sure we're going to heaven, i.e., where will we be 100 years from now? It wouldn't matter what we've achieved here on earth if we'll suffer for all eternity.",
-            "I know I'll go to heaven, but it's not because I'm good. I'm a sinner, just as everyone is. We deserve eternal judgment. But Jesus Christ took the punishment for all my sins and bore it at the cross, and He's my Savior. I've believed in Him, and I have eternal life."
-          ]
-        }
-      ]
-    ]
-  ],
 
   "recommendations": {
     "books": [

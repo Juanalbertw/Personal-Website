@@ -100,7 +100,7 @@
           <!-- External Links (if exist) -->
           <% if(project.externalLink.length > 0) { %>
             <% project.externalLink.forEach((link) => { %>
-              <a href="<%=link[1]%>">
+              <a href="<%=link[1]%>" target="_blank" rel="noopener noreferrer">
                 <span><%=link[0]%></span
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -191,7 +191,7 @@
           <!-- External Links (if exist) -->
           <% if(project.externalLink.length > 0) { %>
             <% project.externalLink.forEach((link) => { %>
-              <a href="<%=link[1]%>">
+              <a href="<%=link[1]%>" target="_blank" rel="noopener noreferrer">
                 <span><%=link[0]%></span
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
