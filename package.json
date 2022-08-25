@@ -8,6 +8,9 @@
   },
   "author": "Juan Albert Wibowo",
   "license": "ISC",
+  "engines": {
+    "node": "14.17.0"
+  },
   "dependencies": {
     "body-parser": "^1.20.0",
     "ejs": "^3.1.8",
