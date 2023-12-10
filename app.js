@@ -10,9 +10,7 @@ const originalProjects = myData["projects"]["originalProjects"];
 const tutorialProjects = myData["projects"]["tutorialProjects"];
 const books = myData["recommendations"]["books"];
 
-mongoose.connect(
-  "mongodb+srv://user1:MongoDB123@cluster0.39zcuhb.mongodb.net/personalWebDB"
-);
+mongoose.connect(process.env.MONGO_URI);
 
 const thoughtSchema = new mongoose.Schema({
   topic: String,
